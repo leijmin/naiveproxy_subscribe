@@ -11,5 +11,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # 这里用的是 Shell 形式 CMD，而非 JSON 数组
-CMD ["/bin/bash", "-c", "gunicorn run:app –bind 0.0.0.0:$PORT"]
+CMD ["/bin/bash", "-c", "gunicorn run:app --bind 0.0.0.0:$PORT"]
 
