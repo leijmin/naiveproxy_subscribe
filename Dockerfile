@@ -10,5 +10,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 # 复制代码文件到容器中
 COPY . .
 
-# 使用 Gunicorn 作为 WSGI 服务器，并绑定到 PORT 环境变量
-CMD ["gunicorn", "--bind", "0.0.0.0:${PORT:-5000}", "app:app"]
+# 这里用的是 Shell 形式 CMD，而非 JSON 数组
+CMD gunicorn --bind 0.0.0.0:${PORT:-5000} app:app
