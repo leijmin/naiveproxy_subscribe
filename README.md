@@ -15,9 +15,9 @@
 
 1. 克隆仓库：
 
-bash
-git clone https://github.com/yourusername/subscription-service.git
-cd subscription-service
+```bash
+git clone https://github.com/leijmin/subscription-service.git
+cd naiveproxy_subscribe
 ```
 
 2. 创建并配置环境变量：
@@ -38,7 +38,7 @@ python app.py
 
 ### Docker 部署
 
-1. 使用 docker-compose：
+使用 docker-compose：
 ```bash
 docker-compose -f docker/docker-compose.yml up -d
 ```
@@ -74,11 +74,6 @@ GET /api/subscribe
 | NODE_PLUGIN | 插件类型 | none |
 | NODE_TCP_FAST_OPEN | 是否启用 TCP Fast Open | false |
 
-## 安全说明
-
-- 请确保在生产环境中使用安全的环境变量值
-- 不要在代码中硬编码敏感信息
-- 建议使用 HTTPS 来保护 API 调用
 
 ## License
 
