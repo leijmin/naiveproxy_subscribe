@@ -4,7 +4,6 @@ import os
 import requests
 import base64
 import yaml
-import json
 
 app = Flask(__name__)
 
