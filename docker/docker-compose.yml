@@ -3,10 +3,10 @@ version: '3.8'
 services:
   web:
     build:
-      context: ..
-      dockerfile: docker/Dockerfile
+      context: .
+      dockerfile: Dockerfile
     ports:
-      - "${PORT:-5000}:${PORT:-5000}"
+      - "${PORT}:${PORT}"
     environment:
       - PORT=${PORT:-5000}
       - NODE_NAME=${NODE_NAME}
@@ -16,4 +16,4 @@ services:
       - NODE_PASSWORD=${NODE_PASSWORD}
       - NODE_TLS=${NODE_TLS}
       - NODE_PLUGIN=${NODE_PLUGIN}
-      - NODE_TCP_FAST_OPEN=${NODE_TCP_FAST_OPEN} 
+      - NODE_TCP_FAST_OPEN=${NODE_TCP_FAST_OPEN}
