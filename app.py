@@ -1,8 +1,10 @@
 from flask import Flask
-from api.subscription import SubscriptionAPI
 import os
 import logging
 from logging.handlers import RotatingFileHandler
+from api.health import HealthAPI
+from api.subscription import SubscriptionAPI
+
 
 def create_app():
     app = Flask(__name__)
@@ -34,8 +36,8 @@ def create_app():
         app.logger.info('Subscription service startup')
 
     # 注册路由
+    app.add_url_rule('/api', view_func=HealthAPI.as_view('health'))
     app.add_url_rule('/api/subscribe', view_func=SubscriptionAPI.as_view('subscription'))
-    
     return app
 
 app = create_app()
