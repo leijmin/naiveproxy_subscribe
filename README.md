@@ -16,8 +16,8 @@
 1. 克隆仓库：
 
 ```bash
-git clone https://github.com/yourusername/subscription-service.git
-cd subscription-service
+git clone https://github.com/leijmin/naiveproxy_subscribe.git
+cd naiveproxy_subscribe
 ```
 
 2. 创建并配置环境变量：
@@ -55,7 +55,9 @@ docker-compose -f docker/docker-compose.yml up -d
 ### 获取订阅内容
 
 ```README.md
-GET /api/subscribe
+GET /api/sub
+params:
+  type: clash 或 clash_b64
 ```
 
 响应：Base64 编码的配置内容
