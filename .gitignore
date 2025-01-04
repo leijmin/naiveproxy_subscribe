@@ -32,3 +32,6 @@ var/
 # OS
 .DS_Store
 Thumbs.db
+
+
+naiveproxy.json

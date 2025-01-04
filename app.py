@@ -37,7 +37,7 @@ def create_app():
 
     # 注册路由
     app.add_url_rule('/api', view_func=HealthAPI.as_view('health'))
-    app.add_url_rule('/api/subscribe', view_func=SubscriptionAPI.as_view('subscription'))
+    app.add_url_rule('/api/sub', view_func=SubscriptionAPI.as_view('subscription'))
     return app
 
 app = create_app()
