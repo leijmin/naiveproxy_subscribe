@@ -16,13 +16,13 @@ def build_clash_yaml(config_data: dict) -> str:
     将节点信息转成最简 Clash YAML
     假设 nodes 数据格式:
     {
-      "uid": "naiveproxy",
+      "uid": "xxx",
       "nodes": [
         {
-          "name": "node_1",
-          "address": "openaishop.top",
+          "name": "xxx",
+          "address": "xxx",
           "port": 443,
-          "password": "774256119a",
+          "password": "xxx",
           "tls": true,
           "plugin": "trojan",
           "tcp_fast_open": false
